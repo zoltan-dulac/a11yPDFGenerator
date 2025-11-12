@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessibility Test Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #222;
+      margin: 2em;
+    }
+    h1, h2 {
+      color: #004080;
+    }
+    figure {
+      text-align: center;
+      margin: 1.5em 0;
+    }
+    figcaption {
+      font-style: italic;
+      font-size: 0.9em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 1px solid #888;
+      padding: 6px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Accessibility PDF Test</h1>
+    <p>This is a test HTML file to verify PDF/UA tagging using <code>openhtmltopdf</code>.</p>
+  </header>
+
+  <main>
+    <h2>1. Image with Alt Text</h2>
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg"
+           alt="A close-up photo of a pink flower with a yellow center." width="300">
+      <figcaption>Example image included for accessibility testing.</figcaption>
+    </figure>
+
+    <h2>2. Ordered List</h2>
+    <ol>
+      <li>Check that headings are tagged properly.</li>
+      <li>Ensure alt text appears in the PDF structure tree.</li>
+      <li>Verify reading order is correct.</li>
+    </ol>
+
+    <h2>3. Simple Table</h2>
+    <table>
+      <caption>Fruit Nutritional Values</caption>
+      <thead>
+        <tr>
+          <th scope="col">Fruit</th>
+          <th scope="col">Calories</th>
+          <th scope="col">Vitamin C (mg)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Apple</th>
+          <td>95</td>
+          <td>8.4</td>
+        </tr>
+        <tr>
+          <th scope="row">Orange</th>
+          <td>62</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <th scope="row">Banana</th>
+          <td>105</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Link Example</h2>
+    <p>
+      Learn more about <a href="https://www.w3.org/WAI/">W3C Web Accessibility Initiative (WAI)</a>.
+    </p>
+  </main>
+
+  <footer>
+    <p>Document generated for testing <strong>a11yPDFGenerator</strong>.</p>
+  </footer>
+
+</body>
+</html>
+
